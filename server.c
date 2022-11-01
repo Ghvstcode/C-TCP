@@ -32,7 +32,7 @@ server_address.sin_family = AF_INET;
 server_address.sin_port = htons(port);
 server_address.sin_addr.s_addr = inet_addr(ip);
 
-//calling bind function to oir specified IP and port
+//calling bind function on the specified IP and port
 n = bind(server_socket,(struct sockaddr*) &server_address,sizeof(server_address));
   if (n < 0){
     perror("unable to bind");
